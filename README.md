@@ -24,11 +24,15 @@ Run Apple's latest Aerial videos as a simple screensaver via Edge
 - [Apple TV Screen Saver Compilation](https://www.youtube.com/watch?v=Wb5r3dr70xI)
 - [Lively Wallpaper app](https://apps.microsoft.com/detail/9ntm2qc6qws7)
 
-# Tips
-- All the code is scripted, no binaries, so it's wide open for mods and fixes - hack away!
-- RunMeOnce.cmd runs WinAerials.cs which populates playlist.js
-- LivelyPage.html walks playlist.js and plays the videos
-- If Apple updates it's videos, just delete playlist.js and do RunMeOnce.cmd again to download the latest.
+# Notes
+- There's of course other cracks at this out there ([OrangeJedi/Aerial](https://github.com/OrangeJedi/Aerial) etc) with more implemenation complexity than i was hoping to see so this overall implementation is meant to be approachable for tweaking:
+  - RunMeOnce.cmd runs WinAerials.cs which populates playlist.js
+  - LivelyPage.html walks playlist.js and plays the videos
+  - that's really it, all the code is scripted, no binaries, so it's wide open for mods and fixes - hack away!
+- if Apple updates it's videos:
+  1. update the video sources path in [config.yaml](config.yaml)
+  2. delete playlist.js and
+  3. RunMeOnce.cmd again to download the latest
 - Run **pre-configured** Lively wallpaper from command line:
   - `& "C:\Program Files\Lively Wallpaper\Lively.exe" setwp --file "$($env:LocalAppData)\Lively Wallpaper\Library\wallpapers\WinAerials"`
 - Stop running lively wallpaper from command line:
