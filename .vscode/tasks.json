@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-script",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}/WinAerials.cs",
+                "--output",
+                "${workspaceFolder}/bin/"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

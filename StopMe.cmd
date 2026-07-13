@@ -1,0 +1,1 @@
+"C:\Program Files\Lively Wallpaper\Lively.exe" closewp --monitor 1

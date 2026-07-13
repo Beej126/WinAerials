@@ -1,0 +1,5 @@
+livelyExePath: "C:\\Program Files\\Lively Wallpaper\\Lively.exe"
+aerialsSourceUrl: "https://configuration.apple.com/configurations/internetservices/aerials/resources-config-26-0.plist"
+movieNodeName: url-4K-SDR-240FPS
+movieTitleNodeName: accessibilityLabel
+debugLogEnabled: true

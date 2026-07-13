@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Script Debugger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-script",
+            "program": "${workspaceFolder}/bin/WinAerials.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}
