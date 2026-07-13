@@ -34,13 +34,7 @@ static async Task RunAsync(AppConfig config)
     await LoadPlaylistJs(config);
 
     var livelyExe = ResolveLivelyExe(config);
-    Assert.NotNull(livelyExe, "Lively not found", "Could not locate Lively.exe",
-        () => Process.Start(new ProcessStartInfo
-        {
-            FileName = "ms-windows-store://pdp/?ProductId=9NTM2QC6QWS7", // Lively's Store ID
-            UseShellExecute = true // Crucial for launching URLs directly without an explicit executable path
-        })
-    );
+    if (livelyExe == null) return;
 
     Logger.Debug("Invoking Lively.exe to run page as desktop wallpaper...");
     Process.Start(new ProcessStartInfo(livelyExe, $"closewp") { UseShellExecute = true });
@@ -98,8 +92,8 @@ static async Task<string?> FetchWithRetriesAsync(string url, int attempts, int[]
 
 // static void UpdateLivelyPage(string movieUrl, string movieTitle)
 // {
-//     var pagePath = Path.Combine(Directory.GetCurrentDirectory(), "LivelyPage.html");
-//     Assert.FileExists(pagePath, "LivelyPage.html not found in current directory. Should've come directly with the repo clone.");
+//     var pagePath = Path.Combine(Directory.GetCurrentDirectory(), "WinAerialsPage.html");
+//     Assert.FileExists(pagePath, "WinAerialsPage.html not found in current directory. Should've come directly with the repo clone.");
 
 //     string htmlContent = File.ReadAllText(pagePath);
 
@@ -145,6 +139,13 @@ static string? ResolveLivelyExe(AppConfig config)
         }
     }
 
+    Logger.Debug("Lively.exe not found in running processes. Launching the install site...");
+    Process.Start(new ProcessStartInfo
+    {
+        // FileName = "ms-windows-store://pdp/?ProductId=9NTM2QC6QWS7", // Lively's MS Store ID
+        FileName = "https://www.rocksdanister.com/lively/",
+        UseShellExecute = true // Crucial for launching URLs directly without an explicit executable path
+    });
     return null;
 }
 

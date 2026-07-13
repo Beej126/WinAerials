@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --start-fullscreen "file:///%~dp0WinAerialsPage.html" --no-first-run --user-data-dir="%LOCALAPPDATA%\Aerials" --allow-file-access-from-files
