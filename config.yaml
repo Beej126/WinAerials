@@ -1,5 +1,8 @@
 livelyExePath: "C:\\Program Files\\Lively Wallpaper\\Lively.exe"
+
+# good place to find updated urls: https://gist.github.com/theothernt/57a51cade0c12c407f48a5121e0939d5#file-apple-tv-screen-saver-feeds-txt
 aerialsSourceUrl: "https://configuration.apple.com/configurations/internetservices/aerials/resources-config-26-0.plist"
+
 movieNodeName: url-4K-SDR-240FPS
 movieTitleNodeName: accessibilityLabel
 debugLogEnabled: true
